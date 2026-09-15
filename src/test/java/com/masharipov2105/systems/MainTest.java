@@ -9,6 +9,6 @@ public class MainTest {
     void testExample(){
 
         assertEquals(10, 5 + 5);
-        System.out.println("Test success run");
+        System.out.println("Test success");
     }
 }
