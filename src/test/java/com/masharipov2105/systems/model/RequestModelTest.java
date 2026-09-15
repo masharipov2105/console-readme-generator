@@ -61,6 +61,9 @@ public class RequestModelTest{
 		assertEquals(true, model != null);
 	}
 
+
+	//============================== getter methods test =========================================
+
 	@Test
 	void testGetProjectName(){
 
@@ -164,4 +167,126 @@ public class RequestModelTest{
 	}
 
 
+
+	//============================== setter methods test =========================================
+
+	@Test
+	void testSetProjectName(){
+
+		model.setProjectName("new-Console-app-name");
+		assertEquals("new-Console-app-name", model.getProjectName());
+	}
+
+	@Test
+	void testSetProjectDescription(){
+
+		model.setProjectDescription("new project decription text");
+		assertEquals("new project decription text", model.getProjectDescription());
+	}
+
+	@Test
+	void testSetProjectFeatures(){
+
+		ArrayList<String> new_features = new ArrayList<>();
+		new_features.add("app-features");
+
+		model.setProjectFeatures(new_features);
+
+		assertEquals(new_features, model.getProjectFeatures());
+	}
+
+	@Test
+	void testSetProjectGoal(){
+
+		model.setProjectGoal("new-project-goals");
+		assertEquals("new-project-goals", model.getProjectGoal());
+	}
+
+	@Test
+	void testSetTechnologies(){
+
+		ArrayList<ArrayList<String>> new_tecno = new ArrayList<>();
+		
+		ArrayList<String> tecno_items = new ArrayList<>();
+		tecno_items.add("| Java | 17 | Asosiy dasturlash tili |");
+
+		new_tecno.add(tecno_items);
+
+		model.setTechnologies(new_tecno);
+
+		assertEquals(new_tecno, model.getTechnologies());
+	}
+
+	@Test
+	void testSetInstallWindowsCommands(){
+
+		ArrayList<String> new_windows_config = new ArrayList<>();
+		new_windows_config.add("git clone https://github.com/masharipov2105/console-readme-generator.git");
+		new_windows_config.add("cd console-readme-generator");
+		new_windows_config.add("java -jar target/readme-generator-1.1.jar");
+
+		model.setInstallWindowsCommands(new_windows_config);
+
+		assertEquals(new_windows_config, model.getInstallWindowsCommands());
+	}
+
+	@Test
+	void testSetInstallLinuxMacCommands(){
+
+		ArrayList<String> new_linuxmac_config = new ArrayList<>();
+		new_linuxmac_config.add("git clone https://github.com/masharipov2105/console-readme-generator.git");
+		new_linuxmac_config.add("cd console-readme-generator");
+		new_linuxmac_config.add("java -jar target/readme-generator-1.1.jar");
+
+		model.setInstallLinuxMacCommands(new_linuxmac_config);
+
+		assertEquals(new_linuxmac_config, model.getInstallLinuxMacCommands());
+	}
+
+	@Test
+	void testSetImagePaths(){
+
+		ArrayList<String> newImagePaths = new ArrayList<>();
+		newImagePaths.add("https://github.com/masharipov2105/images1.png");
+		newImagePaths.add("https://github.com/masharipov2105/images2.png");
+
+		model.setImagePaths(newImagePaths);
+
+		assertEquals(newImagePaths, model.getImagePaths());
+	}
+
+	@Test
+	void testSetTreeData(){
+
+		model.setTreeData("new-app-tree-data");
+		assertEquals("new-app-tree-data", model.getTreeData());
+	}
+
+	@Test
+	void testSetLitsenziya(){
+
+		model.setLitsenziya("new-app-litsenziya");		
+		assertEquals("new-app-litsenziya", model.getLitsenziya());
+	}
+
+	@Test
+	void testSetOwnerGithubName(){
+
+		model.setOwnerGithubName("rudy");
+		assertEquals("rudy", model.getOwnerGithubName());
+	}
+
+	@Test
+	void testSetOwnerTelegramName(){
+
+		model.setOwnerTelegramName("rudy");
+		assertEquals("rudy", model.getOwnerTelegramName());
+	}
+
+	@Test
+	void testSetOwnerEmailName(){
+
+		model.setOwnerEmailName("rudy");
+		assertEquals("rudy", model.getOwnerEmailName());
+	}
 }
