@@ -11,7 +11,7 @@ public class InputValidator{
 
 	public static String parseProjectName(String data){
 
-		if (data == null || data.isEmpty()){
+		if (data == null || data.trim().isEmpty()){
 
 			return null;
 		}
@@ -21,7 +21,7 @@ public class InputValidator{
 
 	public static String parseProjectDescription(String data){
 
-		if (data == null || data.isEmpty()){
+		if (data == null || data.trim().isEmpty()){
 
 			return null;
 		}
@@ -41,7 +41,7 @@ public class InputValidator{
 
 	public static String parseProjectGoal(String data){
 
-		if (data == null || data.isEmpty()){
+		if (data == null || data.trim().isEmpty()){
 
 			return null;
 		}
@@ -91,7 +91,7 @@ public class InputValidator{
 
 	public static String parseTreeData(String data){
 
-		if (data == null || data.isEmpty()){
+		if (data == null || data.trim().isEmpty()){
 
 			return null;
 		}
@@ -101,7 +101,7 @@ public class InputValidator{
 
 	public static String parseIitsenziya(String data){
 
-		if (data == null || data.isEmpty()){
+		if (data == null || data.trim().isEmpty()){
 
 			return null;
 		}
@@ -111,7 +111,7 @@ public class InputValidator{
 
 	public static String parseOwnerGithubName(String data){
 
-		if (data == null || data.isEmpty()){
+		if (data == null || data.trim().isEmpty()){
 
 			return null;
 		}
@@ -121,7 +121,7 @@ public class InputValidator{
 
 	public static String parseOwnerTelegramName(String data){
 
-		if (data == null || data.isEmpty()){
+		if (data == null || data.trim().isEmpty()){
 
 			return null;
 		}
@@ -136,7 +136,7 @@ public class InputValidator{
 
 	public static String parseOwnerEmailName(String data){
 
-		if (data == null || data.isEmpty()){
+		if (data == null || data.trim().isEmpty()){
 
 			return null;
 		}
