@@ -41,6 +41,7 @@ public class RequestModelTest{
 
 			"Console-app",
 			"This is console-app",
+			"This is a full description",
 			features,
 			"project-goals",
 			tecno,
@@ -74,6 +75,12 @@ public class RequestModelTest{
 	void testGetProjectDescription(){
 
 		assertEquals("This is console-app", model.getProjectDescription());
+	}
+
+	@Test
+	void testGetProjectFullDescription(){
+
+		assertEquals("This is a full description", model.getProjectFullDescription());
 	}
 
 	@Test
@@ -182,6 +189,13 @@ public class RequestModelTest{
 
 		model.setProjectDescription("new project decription text");
 		assertEquals("new project decription text", model.getProjectDescription());
+	}
+
+	@Test
+	void testSetProjectFullDescription(){
+
+		model.setProjectFullDescription("This is a new full description");
+		assertEquals("This is a new full description", model.getProjectFullDescription());
 	}
 
 	@Test

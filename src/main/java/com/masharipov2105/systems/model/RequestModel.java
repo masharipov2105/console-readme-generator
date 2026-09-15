@@ -7,6 +7,7 @@ public class RequestModel{
 	//fields
 	private String projectName;
 	private String projectDescription;
+	private String projectFullDescription;
 	private ArrayList<String> projectFeatures;
 	private String projectGoal;
 	private ArrayList<ArrayList<String>> technologies;
@@ -24,6 +25,7 @@ public class RequestModel{
 	public RequestModel(
 		String projectName, 
 		String projectDescription, 
+		String projectFullDescription,
 		ArrayList<String> projectFeatures, 
 		String projectGoal,
 		ArrayList<ArrayList<String>> technologies,
@@ -39,6 +41,7 @@ public class RequestModel{
 		//initialize
 		this.projectName = projectName;
 		this.projectDescription = projectDescription;
+		this.projectFullDescription = projectFullDescription;
 		this.projectFeatures = projectFeatures;
 		this.projectGoal = projectGoal;
 		this.technologies = technologies;
@@ -62,6 +65,11 @@ public class RequestModel{
 	public String getProjectDescription(){
 
 		return this.projectDescription;
+	}
+
+	public String getProjectFullDescription(){
+
+		return this.projectFullDescription;
 	}
 
 	public ArrayList<String> getProjectFeatures(){
@@ -131,6 +139,11 @@ public class RequestModel{
 	public void setProjectDescription(String newProjectDescription){
 
 		this.projectDescription = newProjectDescription;
+	}
+
+	public void setProjectFullDescription(String newProjectFullDescription){
+
+		this.projectFullDescription = newProjectFullDescription;
 	}
 
 	public void setProjectFeatures(ArrayList<String> newProjectFeature){
