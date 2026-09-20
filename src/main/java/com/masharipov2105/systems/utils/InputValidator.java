@@ -2,10 +2,13 @@ package com.masharipov2105.systems.utils;
 
 import java.util.ArrayList;
 
-public class InputValidator{
+public final class InputValidator{
 
 	//constructor
-	private InputValidator(){}
+	private InputValidator(){
+
+		throw new UnsupportedOperationException("Utility class cannot be instantiated!");		          
+	}
 
 	//static methods
 
