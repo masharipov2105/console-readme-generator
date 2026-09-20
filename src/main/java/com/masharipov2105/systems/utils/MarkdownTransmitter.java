@@ -11,7 +11,7 @@ public final class MarkdownTransmitter{
 
 	public static String projectNameFormat(String projectName){
 
-        return String.format("# %s \n\n", projectName);
+        return String.format("# %s\n\n", projectName);
     }
 
     public static String projectDescriptionFormat(String projectName, String projectDescription){
@@ -45,7 +45,7 @@ public final class MarkdownTransmitter{
         for (String i : projectFeatures){
 
             String[] helper = i.split("%%");
-            finalResult += String.format("| %s | %s |\n", helper[0], helper[1]);
+            finalResult += String.format("| %s|%s |\n", helper[0], helper[1]);
         }
 
         finalResult += "\n---\n\n";
@@ -53,7 +53,7 @@ public final class MarkdownTransmitter{
         return finalResult;
     }
 
-    public static String projectGoal(String objectiveText, String[] objectives){
+    public static String projectGoalFormat(String objectiveText, String[] objectives){
 
         String finalResult = "";
 
@@ -81,7 +81,7 @@ public final class MarkdownTransmitter{
 
             String[] helper = i.split("%%");
 
-            finalResult += String.format("| %s | %s | %s |\n", helper[0], helper[1], helper[2]);
+            finalResult += String.format("| %s|%s|%s |\n", helper[0], helper[1], helper[2]);
         }
 
         finalResult += "\n---\n\n";
