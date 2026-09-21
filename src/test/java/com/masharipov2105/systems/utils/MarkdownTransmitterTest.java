@@ -1,4 +1,4 @@
-package com.masharipov2105.systems.util;
+package com.masharipov2105.systems.utils;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;

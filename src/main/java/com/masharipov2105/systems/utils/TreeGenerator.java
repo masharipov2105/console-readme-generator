@@ -1,4 +1,4 @@
-package com.masharipov2105.systems.util;
+package com.masharipov2105.systems.utils;
 
 import java.util.ArrayList;
 import java.io.File;
