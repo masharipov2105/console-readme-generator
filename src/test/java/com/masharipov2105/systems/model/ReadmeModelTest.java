@@ -27,9 +27,7 @@ public class ReadmeModelTest{
 			"line9",
 			"line10",
 			"line11",
-			"line12",
-			"line13",
-			"line14"
+			"line12"
 		);
 
 	}
@@ -110,21 +108,9 @@ public class ReadmeModelTest{
 	}
 
 	@Test
-	void testGetFinalOwnerGithubName(){
+	void testGetOwnerData(){
 
-		assertEquals("line12", finalModel.getFinalOwnerGithubName());
-	}
-
-	@Test
-	void testGetFinalOwnerTelegramName(){
-
-		assertEquals("line13", finalModel.getFinalOwnerTelegramName());
-	}
-
-	@Test
-	void testGetFinalOwnerEmailName(){
-
-		assertEquals("line14", finalModel.getFinalOwnerEmailName());
+		assertEquals("line12", finalModel.getOwnerData());
 	}
 
 
@@ -210,23 +196,9 @@ public class ReadmeModelTest{
 	}
 
 	@Test
-	void testSetFinalOwnerGithubName(){
+	void testSetOwnerData(){
 
-		finalModel.setFinalOwnerGithubName("new line12");
-		assertEquals("new line12", finalModel.getFinalOwnerGithubName());
-	}
-
-	@Test
-	void testSetFinalOwnerTelegramName(){
-
-		finalModel.setFinalOwnerTelegramName("new line13");
-		assertEquals("new line13", finalModel.getFinalOwnerTelegramName());
-	}
-
-	@Test
-	void testSetFinalOwnerEmailName(){
-
-		finalModel.setFinalOwnerEmailName("new line14");
-		assertEquals("new line14", finalModel.getFinalOwnerEmailName());
+		finalModel.setOwnerData("new line12");
+		assertEquals("new line12", finalModel.getOwnerData());
 	}
 }

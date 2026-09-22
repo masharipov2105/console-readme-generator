@@ -16,9 +16,7 @@ public class ReadmeModel{
 	private String finalImagePaths;
  	private String finalTreeData;
 	private String finalLitsenziya;
-	private String finalOwnerGithubName;
-	private String finalOwnerTelegramName;
-	private String finalOwnerEmailName;
+	private String ownerData;
 
 	//constructor
 
@@ -34,9 +32,7 @@ public class ReadmeModel{
 		String imagePaths,
 		String treeData,
 		String litsenziya,
-		String ownerGithubName,
-		String ownerTelegramName,
-		String ownerEmailName
+		String ownerData
 	){
 		//initialize
 		this.finalProjectName = projectName;
@@ -50,9 +46,7 @@ public class ReadmeModel{
 		this.finalImagePaths = imagePaths;
 		this.finalTreeData = treeData;
 		this.finalLitsenziya = litsenziya;
-		this.finalOwnerGithubName = ownerGithubName;
-		this.finalOwnerTelegramName = ownerTelegramName;
-		this.finalOwnerEmailName = ownerEmailName;
+		this.ownerData = ownerData;
 	}
 
 	// getters
@@ -112,19 +106,9 @@ public class ReadmeModel{
 		return this.finalLitsenziya;
 	}
 
-	public String getFinalOwnerGithubName(){
+	public String getOwnerData(){
 
-		return this.finalOwnerGithubName;
-	}
-
-	public String getFinalOwnerTelegramName(){
-
-		return this.finalOwnerTelegramName;
-	}
-
-	public String getFinalOwnerEmailName(){
-
-		return this.finalOwnerEmailName;
+		return this.ownerData;
 	}
 
 
@@ -186,18 +170,8 @@ public class ReadmeModel{
 		this.finalLitsenziya = newLitsenziya;
 	}
 
-	public void setFinalOwnerGithubName(String newOwnerGithubName){
+	public void setOwnerData(String newOwnerData){
 
-		this.finalOwnerGithubName = newOwnerGithubName;
-	}
-
-	public void setFinalOwnerTelegramName(String newOwnerTelegramName){
-
-		this.finalOwnerTelegramName = newOwnerTelegramName;
-	}
-
-	public void setFinalOwnerEmailName(String newOwnerEmailName){
-
-		this.finalOwnerEmailName = newOwnerEmailName;
+		this.ownerData = newOwnerData;
 	}
 }

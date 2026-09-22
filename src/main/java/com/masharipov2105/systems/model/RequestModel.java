@@ -6,19 +6,19 @@ public class RequestModel{
 
 	//fields
 	private String projectName; //
-	private String projectDescription;
-	private String projectFullDescription;
-	private ArrayList<String> projectFeatures;
-	private String projectGoal;
-	private ArrayList<ArrayList<String>> technologies;
-	private ArrayList<String> installWindowsCommands;
-	private ArrayList<String> installLinuxMacCommands;
-	private ArrayList<String> imagePaths;
- 	private String treeData;
-	private String litsenziya;
-	private String ownerGithubName;
-	private String ownerTelegramName;
-	private String ownerEmailName;
+	private String projectDescription; //
+	private String projectFullDescription; //
+	private ArrayList<String> projectFeatures; //
+	private String projectGoal; //
+	private ArrayList<ArrayList<String>> technologies; //
+	private ArrayList<String> installWindowsCommands; //
+	private ArrayList<String> installLinuxMacCommands; //
+	private ArrayList<String> imagePaths; //
+ 	private String treeData; //
+	private String litsenziya; //
+	private String ownerGithubName; //
+	private String ownerTelegramName; //
+	private String ownerEmailName; //
 
 	//constructor
 
