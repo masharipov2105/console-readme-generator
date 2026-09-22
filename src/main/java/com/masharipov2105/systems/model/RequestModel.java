@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class RequestModel{
 
 	//fields
-	private String projectName;
+	private String projectName; //
 	private String projectDescription;
 	private String projectFullDescription;
 	private ArrayList<String> projectFeatures;

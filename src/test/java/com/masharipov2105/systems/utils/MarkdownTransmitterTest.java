@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class MarkdownTransmitterTest{
 
 
+	//
 	@Test
 	void testprojectNameFormat(){
 
@@ -15,21 +16,23 @@ public class MarkdownTransmitterTest{
         
 	}
 
+	//
 	@Test
 	void testprojectDescriptionFormat(){
 
-		assertEquals("** Name ** - Decriptin\n\n---\n\n", MarkdownTransmitter.projectDescriptionFormat("Name", "Decriptin"));
+		assertEquals("** Name ** - Decriptin\n\n---\n\n", MarkdownTransmitter.projectDescriptionFormat("Name%%Decriptin"));
 	}        
 
+	//
 	@Test
 	void testprojectFullDescriptionFormat(){
 
-		String[] d = {"a", "b", "c"};
-		String name = "Name";
+		String dd = "Name%%a%%b%%d";
 
-		assertEquals("## About the project\n\n    Name\n\n- a\n- b\n- c\n\n---\n\n", MarkdownTransmitter.projectFullDescriptionFormat(name, d));
+		assertEquals("## About the project\n\n    Name\n\n- a\n- b\n- d\n\n---\n\n", MarkdownTransmitter.projectFullDescriptionFormat(dd));
 	}
 
+	//
 	@Test
 	void testprojectFeaturesFormat(){
 
@@ -41,19 +44,34 @@ public class MarkdownTransmitterTest{
 		assertEquals("## Features\n\n| Function | Description |\n|----------|-------------|\n| a | b |\n| c | d |\n\n---\n\n", MarkdownTransmitter.projectFeaturesFormat(t));
 	}
 
+	//
 	@Test
 	void projectGoalFormat(){
 
-		String[] objectives = {"ab", "bc", "cd"};
-		String objectiveText = "Text";
+		String ddd = "Text%%ab%%bc%%cd";
 
-		assertEquals("## Project objective\n\n    Text\n\n- ab\n- bc\n- cd\n\n---\n\n", MarkdownTransmitter.projectGoalFormat(objectiveText, objectives));
+		assertEquals("## Project objective\n\n    Text\n\n- ab\n- bc\n- cd\n\n---\n\n", MarkdownTransmitter.projectGoalFormat(ddd));
 	}
 
+	//
 	@Test
 	void testtechnologiesFormat(){
 
-		String[] projectFeatures = {"abc %% bcd %% cde", "xyz %% yzw %% zwa"};
+		ArrayList<ArrayList<String>> dd = new ArrayList<>();
+
+		ArrayList<String> item1 = new ArrayList<>();
+		ArrayList<String> item2 = new ArrayList<>();
+		
+		item1.add("abc");
+		item1.add("bcd");
+		item1.add("cde");
+
+		item2.add("xyz");
+		item2.add("yzw");
+		item2.add("zwa");
+
+		dd.add(item1);
+		dd.add(item2);
 
 		String result = "## Technologies\n\n" + 
 		                "| Technology | Version | Objective |\n" +
@@ -61,13 +79,18 @@ public class MarkdownTransmitterTest{
 		                "| abc | bcd | cde |\n" +
 		                "| xyz | yzw | zwa |\n" +
 		                "\n---\n\n";
-		assertEquals(result, MarkdownTransmitter.technologiesFormat(projectFeatures));
+		assertEquals(result, MarkdownTransmitter.technologiesFormat(dd));
 	}
 
+	//
 	@Test
 	void testinstallWindowsCommandsFormat(){
 
-		String[] command = {"ab", "bc", "cd"};
+		ArrayList<String> dd = new ArrayList<>();
+
+		dd.add("ab");
+		dd.add("bc");
+		dd.add("cd");
 
         String result = "## Installation and Execution\n\n### Windows\n```cmd\n" +
                         " ab\n\n" +
@@ -75,23 +98,29 @@ public class MarkdownTransmitterTest{
                         " cd\n\n" +
                         "```\n---\n\n";
 
-		assertEquals(result, MarkdownTransmitter.installWindowsCommandsFormat(command));
+		assertEquals(result, MarkdownTransmitter.installWindowsCommandsFormat(dd));
 	}
 
+	//
 	@Test
 	void testinstallLinuxMacCommandsFormat(){
 
-		String[] command = {"linux", "mac", "commands"};
+		ArrayList<String> dd = new ArrayList<>();
 
-        String result = "## Installation and Execution\n\n### Windows\n```cmd\n" +
+		dd.add("linux");
+		dd.add("mac");
+		dd.add("commands");
+
+        	String result = "## Installation and Execution\n\n### Windows\n```cmd\n" +
                         " linux\n\n" +
                         " mac\n\n" +
                         " commands\n\n" +
                         "```\n---\n\n";
 
-		assertEquals(result, MarkdownTransmitter.installLinuxMacCommandsFormat(command));
+		assertEquals(result, MarkdownTransmitter.installLinuxMacCommandsFormat(dd));
 	}
 
+	//
 	@Test
 	void testimagePathsFormat(){
 
@@ -109,18 +138,21 @@ public class MarkdownTransmitterTest{
 		assertEquals(result, MarkdownTransmitter.imagePathsFormat(imgs));
 	}
 
+	//
 	@Test
 	void testtreeDataFormat(){
 
 		assertEquals("## Project Structure\n\n```cmd\nTree\n```\n---\n\n", MarkdownTransmitter.treeDataFormat("Tree"));
 	}
 
+	//
 	@Test
 	void testlitsenziyaFormat(){
 
 		assertEquals("## License\n\nLitsenziya text\n\n---\n\n", MarkdownTransmitter.litsenziyaFormat("Litsenziya text"));
 	}
 
+	//
 	@Test
 	void testownerFormat(){
 

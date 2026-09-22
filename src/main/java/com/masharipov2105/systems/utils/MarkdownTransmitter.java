@@ -9,17 +9,34 @@ public final class MarkdownTransmitter{
 		throw new UnsupportedOperationException("Utility class cannot be instantiated!");
 	}
 
+    //
 	public static String projectNameFormat(String projectName){
 
         return String.format("# %s\n\n", projectName);
     }
 
-    public static String projectDescriptionFormat(String projectName, String projectDescription){
+    //
+    public static String projectDescriptionFormat(String projectDescription){
 
-        return String.format("** %s ** - %s\n\n---\n\n", projectName, projectDescription);
+        String projectName = projectDescription.split("%%")[0];
+        String decription = projectDescription.split("%%")[1];
+
+        return String.format("** %s ** - %s\n\n---\n\n", projectName, decription);
     }
 
-    public static String projectFullDescriptionFormat(String descriptionText, String[] sentences){
+    //
+    public static String projectFullDescriptionFormat(String projectFullDescription){
+
+        String[] data = projectFullDescription.split("%%");
+
+        String descriptionText = data[0];
+
+        String[] sentences = new String[data.length-1];
+
+        for (int i = 1; i < data.length; i ++){
+
+            sentences[i-1] = data[i];
+        }
 
         String finalResult = "";
 
@@ -34,6 +51,7 @@ public final class MarkdownTransmitter{
         return finalResult;
     }
 
+    //
     public static String projectFeaturesFormat(ArrayList<String> projectFeatures){
 
         String finalResult = "";
@@ -53,7 +71,19 @@ public final class MarkdownTransmitter{
         return finalResult;
     }
 
-    public static String projectGoalFormat(String objectiveText, String[] objectives){
+    //
+    public static String projectGoalFormat(String projectGoal){
+
+        String[] data = projectGoal.split("%%");
+
+        String objectiveText = data[0];
+
+        String[] objectives = new String[data.length-1];
+
+        for (int i = 1; i < data.length; i ++){
+
+            objectives[i-1] = data[i];
+        }
 
         String finalResult = "";
 
@@ -69,7 +99,8 @@ public final class MarkdownTransmitter{
         return finalResult;
     }
 
-    public static String technologiesFormat(String[] technologies){
+    //
+    public static String technologiesFormat(ArrayList<ArrayList<String>> technologies){
 
         String finalResult = "";
 
@@ -77,11 +108,9 @@ public final class MarkdownTransmitter{
         finalResult += "| Technology | Version | Objective |\n";
         finalResult += "|------------|---------|-----------|\n";
 
-        for (String i : technologies){
+        for (ArrayList<String> i : technologies){
 
-            String[] helper = i.split("%%");
-
-            finalResult += String.format("| %s|%s|%s |\n", helper[0], helper[1], helper[2]);
+            finalResult += String.format("| %s | %s | %s |\n", i.get(0), i.get(1), i.get(2));
         }
 
         finalResult += "\n---\n\n";
@@ -89,15 +118,16 @@ public final class MarkdownTransmitter{
         return finalResult;
     }
 
-    public static String installWindowsCommandsFormat(String[] commands){
+    //
+    public static String installWindowsCommandsFormat(ArrayList<String> installWindowsCommands){
 
         String finalResult = "";
 
         finalResult += "## Installation and Execution\n\n### Windows\n```cmd\n";
 
-        for (String i : commands){
+        for (int i = 0; i < installWindowsCommands.size(); i ++){
 
-            finalResult += String.format(" %s\n\n", i);
+            finalResult += String.format(" %s\n\n", installWindowsCommands.get(i));
         }
 
         finalResult += "```\n---\n\n";
@@ -105,15 +135,17 @@ public final class MarkdownTransmitter{
         return finalResult;
     }
 
-    public static String installLinuxMacCommandsFormat(String[] commands){
+
+    //
+    public static String installLinuxMacCommandsFormat(ArrayList<String> installLinuxMacCommands){
 
         String finalResult = "";
 
         finalResult += "## Installation and Execution\n\n### Windows\n```cmd\n";
 
-        for (String i : commands){
+        for (int i = 0;i < installLinuxMacCommands.size();i ++){
 
-            finalResult += String.format(" %s\n\n", i);
+            finalResult += String.format(" %s\n\n", installLinuxMacCommands.get(i));
         }
 
         finalResult += "```\n---\n\n";
@@ -121,6 +153,7 @@ public final class MarkdownTransmitter{
         return finalResult;
     }
 
+    //
     public static String imagePathsFormat(ArrayList<String> imgs){
 
         String finalResult = "";
@@ -137,6 +170,7 @@ public final class MarkdownTransmitter{
         return finalResult;
     }
 
+    //
     public static String treeDataFormat(String data){
 
         String finalResult = "";
@@ -145,6 +179,7 @@ public final class MarkdownTransmitter{
         return finalResult;
     }
 
+    //
     public static String litsenziyaFormat(String litsenziya){
 
         String finalResult = "";
@@ -154,6 +189,7 @@ public final class MarkdownTransmitter{
         return finalResult;
     }
 
+    //
     public static String ownerFormat(String[] connections){
 
         String finalResult = "";
