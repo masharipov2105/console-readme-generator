@@ -3,6 +3,7 @@ package com.masharipov2105.systems.service;
 import com.masharipov2105.systems.model.*;
 import com.masharipov2105.systems.utils.MarkdownTransmitter;
 import com.masharipov2105.systems.utils.TreeGenerator;
+import com.masharipov2105.systems.generator.*;
 
 import java.util.ArrayList;
 
@@ -30,7 +31,8 @@ public class ReadmeServiceImpl implements ReadmeService{
    			MarkdownTransmitter.imagePathsFormat(model.getImagePaths()),
    			MarkdownTransmitter.treeDataFormat(model.getTreeData()),
    			MarkdownTransmitter.litsenziyaFormat(model.getLitsenziya()),
-   			MarkdownTransmitter.ownerFormat(ownerData)
+   			MarkdownTransmitter.ownerFormat(ownerData),
+   			model.getFileUrl()
    		);
    		
    		return true;

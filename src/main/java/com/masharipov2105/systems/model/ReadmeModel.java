@@ -17,6 +17,7 @@ public class ReadmeModel{
  	private String finalTreeData;
 	private String finalLitsenziya;
 	private String ownerData;
+	private String finalFileUrl;
 
 	//constructor
 
@@ -32,7 +33,8 @@ public class ReadmeModel{
 		String imagePaths,
 		String treeData,
 		String litsenziya,
-		String ownerData
+		String ownerData,
+		String finalFileUrl
 	){
 		//initialize
 		this.finalProjectName = projectName;
@@ -47,6 +49,7 @@ public class ReadmeModel{
 		this.finalTreeData = treeData;
 		this.finalLitsenziya = litsenziya;
 		this.ownerData = ownerData;
+		this.finalFileUrl = finalFileUrl;
 	}
 
 	// getters
@@ -111,6 +114,10 @@ public class ReadmeModel{
 		return this.ownerData;
 	}
 
+	public String getFinalFileUrl(){
+
+		return this.finalFileUrl;
+	}
 
 
 	//setters
@@ -173,5 +180,10 @@ public class ReadmeModel{
 	public void setOwnerData(String newOwnerData){
 
 		this.ownerData = newOwnerData;
+	}
+
+	public void setFinalFileUrl(String newFinalFileUrl){
+
+		this.finalFileUrl = newFinalFileUrl;
 	}
 }

@@ -19,6 +19,7 @@ public class RequestModel{
 	private String ownerGithubName; //
 	private String ownerTelegramName; //
 	private String ownerEmailName; //
+	private String fileUrl;
 
 	//constructor
 
@@ -36,7 +37,8 @@ public class RequestModel{
 		String litsenziya,
 		String ownerGithubName,
 		String ownerTelegramName,
-		String ownerEmailName
+		String ownerEmailName,
+		String fileUrl
 	){
 		//initialize
 		this.projectName = projectName;
@@ -53,6 +55,7 @@ public class RequestModel{
 		this.ownerGithubName = ownerGithubName;
 		this.ownerTelegramName = ownerTelegramName;
 		this.ownerEmailName = ownerEmailName;
+		this.fileUrl = fileUrl;
 	}
 
 	// getters
@@ -127,6 +130,11 @@ public class RequestModel{
 		return this.ownerEmailName;
 	}
 
+	public String getFileUrl(){
+
+		return this.fileUrl;
+	}
+
 
 	//setters
 
@@ -198,5 +206,10 @@ public class RequestModel{
 	public void setOwnerEmailName(String newOwnerEmailName){
 
 		this.ownerEmailName = newOwnerEmailName;
+	}
+
+	public void setFileUrl(String newFileUrl){
+
+		this.fileUrl = newFileUrl;
 	}
 }

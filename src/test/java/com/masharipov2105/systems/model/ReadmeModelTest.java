@@ -27,7 +27,8 @@ public class ReadmeModelTest{
 			"line9",
 			"line10",
 			"line11",
-			"line12"
+			"line12",
+			"line13"
 		);
 
 	}
@@ -111,6 +112,12 @@ public class ReadmeModelTest{
 	void testGetOwnerData(){
 
 		assertEquals("line12", finalModel.getOwnerData());
+	}
+
+	@Test
+	void testGetFinalFileUrl(){
+
+		assertEquals("line13", finalModel.getFinalFileUrl());
 	}
 
 
@@ -200,5 +207,12 @@ public class ReadmeModelTest{
 
 		finalModel.setOwnerData("new line12");
 		assertEquals("new line12", finalModel.getOwnerData());
+	}
+
+	@Test
+	void testSetFinalFileUrl(){
+
+		finalModel.setFinalFileUrl("new line13");
+		assertEquals("new line13", finalModel.getFinalFileUrl());
 	}
 }

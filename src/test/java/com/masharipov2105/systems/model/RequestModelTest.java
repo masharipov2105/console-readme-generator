@@ -52,7 +52,8 @@ public class RequestModelTest{
 			"app-litsenziya",
 			"masharipov2105",
 			"masharipov2105",
-			"masharipov2105"
+			"masharipov2105",
+			"file_path"
 		);
 	}
 
@@ -171,6 +172,12 @@ public class RequestModelTest{
 	void testGetOwnerEmailName(){
 
 		assertEquals("masharipov2105", model.getOwnerEmailName());
+	}
+
+	@Test
+	void testGetFileUrl(){
+
+		assertEquals("file_path", model.getFileUrl());
 	}
 
 
@@ -302,5 +309,13 @@ public class RequestModelTest{
 
 		model.setOwnerEmailName("rudy");
 		assertEquals("rudy", model.getOwnerEmailName());
+	}
+
+	@Test
+	void testSetFileUrl(){
+
+		model.setFileUrl("new file_url");
+
+		assertEquals("new file_url", model.getFileUrl());
 	}
 }
