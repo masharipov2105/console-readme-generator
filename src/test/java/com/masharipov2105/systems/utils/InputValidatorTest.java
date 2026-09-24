@@ -30,6 +30,14 @@ public class InputValidatorTest{
 	}
 
 	@Test
+	void testProjectFullDescription(){
+
+		assertEquals("full decription", InputValidator.parseProjectFullDescription("full decription"));
+		assertEquals(null, InputValidator.parseProjectFullDescription(null));
+		assertEquals(null, InputValidator.parseProjectFullDescription(""));
+	}
+
+	@Test
 	void testParseProjectFeatures(){
 
 		ArrayList<String> res = new ArrayList<>();
@@ -163,5 +171,13 @@ public class InputValidatorTest{
 		assertEquals(null, InputValidator.parseOwnerEmailName(""));
 		assertEquals("invalid data: Email account", InputValidator.parseOwnerEmailName("Hjsk"));
 		assertEquals("invalid data: Invalid Gmail", InputValidator.parseOwnerEmailName("masharipov2105gmail.com"));
+	}
+
+	@Test
+	void testParseFileUrl(){
+
+		assertEquals("file/path", InputValidator.parseFileUrl("file/path"));
+		assertEquals(null, InputValidator.parseFileUrl(null));
+		assertEquals(null, InputValidator.parseFileUrl(""));
 	}
 }

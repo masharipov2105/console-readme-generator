@@ -34,7 +34,9 @@ public class ReadmeServiceImpl implements ReadmeService{
    			MarkdownTransmitter.ownerFormat(ownerData),
    			model.getFileUrl()
    		);
+
+   		ReadmeGenerator generator = new ReadmeGeneratorImpl();
    		
-   		return true;
+   		return generator.generate(readmeModel);
    	} 
 }

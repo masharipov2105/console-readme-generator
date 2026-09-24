@@ -32,6 +32,16 @@ public final class InputValidator{
 		return data;
 	}
 
+	public static String parseProjectFullDescription(String data){
+
+		if (data == null || data.trim().isEmpty()){
+
+			return null;
+		}
+
+		return data;
+	}
+
 	public static ArrayList<String> parseProjectFeatures(ArrayList<String> data){
 
 		if (data == null || data.size() == 0){
@@ -171,5 +181,15 @@ public final class InputValidator{
 		}
 
 		return data;
+	}
+
+	public static String parseFileUrl(String url){
+
+		if (url == null || url.trim().isEmpty()){
+
+			return null;
+		}
+
+		return url;
 	}
 }
