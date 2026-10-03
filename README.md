@@ -1,7 +1,7 @@
 # Console Readme Generator
 
 
-**Console Readme Generator** - A CLI tool that generates standardized README.md files through an interactive questionnaire.
+**Console Readme Generator** - Console Readme Generator - A CLI tool that generates standardized README.md files through an interactive questionnaire.
 
 ---
 
@@ -56,26 +56,27 @@ This project was born out of a personal need: I wanted to improve my Java skills
 
 ### Windows
 ```cmd
- git clone https://github.com/masharipov2105/console-readme-generator.git
+  git clone https://github.com/masharipov2105/console-readme-generator.git
 
- cd console-readme-generator
+  cd console-readme-generator
 
- mvn clean package
+  mvn clean package
 
- java -jar target/console-readme-generator-1.0-SNAPSHOT.jar
+  java -jar target/console-readme-generator-1.0-SNAPSHOT.jar
 
 ```
 ---
 
+
 ### Linux/Mac
 ```bash
- git clone https://github.com/masharipov2105/console-readme-generator.git
+  git clone https://github.com/masharipov2105/console-readme-generator.git
 
- cd console-readme-generator
+  cd console-readme-generator
 
- mvn clean package
+  mvn clean package
 
- java -jar target/console-readme-generator-1.0-SNAPSHOT.jar
+  java -jar target/console-readme-generator-1.0-SNAPSHOT.jar
 
 ```
 ---
@@ -194,9 +195,10 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Author
 
-**Masharipov**
+- Github : [masharipov2105](https://github.com/masharipov2105)
 
-- GitHub: [@masharipov2105](https://github.com/masharipov2105)
-- Email: masharipov2105@gmail.com
+- Telegram : [masharipov2105](https://t.me/masharipov2105)
+
+- Gmail : masharipov2105@gmail.com
 
 
