@@ -194,10 +194,9 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Author
 
-    masharipov2105
+**Masharipov**
 
-    @masharipov2105
-
-    masharipov2105@gmail.com
+- GitHub: [@masharipov2105](https://github.com/masharipov2105)
+- Email: masharipov2105@gmail.com
 
 
