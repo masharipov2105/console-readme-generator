@@ -68,7 +68,7 @@ This project was born out of a personal need: I wanted to improve my Java skills
 ---
 
 ### Linux/Mac
-```cmd
+```bash
  git clone https://github.com/masharipov2105/console-readme-generator.git
 
  cd console-readme-generator
