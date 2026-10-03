@@ -1,14 +1,14 @@
 # Console Readme Generator
 
 
-** Console Readme Generator ** - A CLI tool that generates standardized README.md files through an interactive questionnaire.
+**Console Readme Generator** - A CLI tool that generates standardized README.md files through an interactive questionnaire.
 
 ---
 
 
 ## About the project
 
-    Writing a good README is time-consuming and often overlooked. Developers either skip it entirely or produce inconsistent documentation across projects. Console Readme Generator solves this problem by asking a series of simple questions in your terminal and automatically producing a clean, standardized README.md file — all in under 10 minutes. No templates to remember, no Markdown syntax to memorize, no formatting decisions to make.
+Writing a good README is time-consuming and often overlooked. Developers either skip it entirely or produce inconsistent documentation across projects. Console Readme Generator solves this problem by asking a series of simple questions in your terminal and automatically producing a clean, standardized README.md file — all in under 10 minutes. No templates to remember, no Markdown syntax to memorize, no formatting decisions to make.
 
 - Interactive CLI questionnaire — just 14 simple questions and your README is ready.
 - Standardized output — every README follows the same clean structure, making projects easier to compare and evaluate.
@@ -33,7 +33,7 @@
 
 ## Project objective
 
-    This project was born out of a personal need: I wanted to improve my Java skills, practice software architecture, and apply clean code principles to a real problem. Writing READMEs was always tedious for me — I would either skip it entirely or write something inconsistent — so I decided to solve two problems at once: build a useful tool and grow as a developer. While the primary motivation was learning, the result is a working CLI tool that anyone can use to generate standardized README files in minutes.
+This project was born out of a personal need: I wanted to improve my Java skills, practice software architecture, and apply clean code principles to a real problem. Writing READMEs was always tedious for me — I would either skip it entirely or write something inconsistent — so I decided to solve two problems at once: build a useful tool and grow as a developer. While the primary motivation was learning, the result is a working CLI tool that anyone can use to generate standardized README files in minutes.
 
 - The primary goal was personal growth. I wanted to move beyond tutorials and build something real — from idea to working release. This project gave me hands-on experience with layered architecture, dependency injection, and clean code principles.
 - The second goal was to solve a problem I personally faced: writing READMEs is time-consuming and easy to postpone. I wanted a tool that turns this tedious task into a simple, guided process. It produces a clean, standardized README without requiring any Markdown knowledge.
@@ -66,9 +66,6 @@
 
 ```
 ---
-
-
-## Installation and Execution
 
 ### Windows
 ```cmd
