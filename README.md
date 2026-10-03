@@ -93,7 +93,7 @@ This project was born out of a personal need: I wanted to improve my Java skills
 
 ## Project Structure
 
-```cmd
+```text
 console-readme-generator/
 ├── screenshots/
 │   ├── img1.png
