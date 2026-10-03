@@ -139,7 +139,7 @@ public final class InputValidator{
 			return null;
 		}
 
-		if (data.charAt(0) != '@'){
+		if (data.charAt(0) == '@'){
 
 			return "Invalid data: Telegram username";
 		}

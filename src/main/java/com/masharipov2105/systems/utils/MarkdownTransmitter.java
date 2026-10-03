@@ -21,7 +21,7 @@ public final class MarkdownTransmitter{
         String projectName = projectDescription.split("%%")[0];
         String decription = projectDescription.split("%%")[1];
 
-        return String.format("** %s ** - %s\n\n---\n\n", projectName, decription);
+        return String.format("**%s** - %s\n\n---\n\n", projectName, decription);
     }
 
     //
@@ -40,7 +40,7 @@ public final class MarkdownTransmitter{
 
         String finalResult = "";
 
-        finalResult += String.format("## About the project\n\n    %s\n\n", descriptionText);
+        finalResult += String.format("## About the project\n\n%s\n\n", descriptionText);
 
         for (String i : sentences){
 
@@ -87,7 +87,7 @@ public final class MarkdownTransmitter{
 
         String finalResult = "";
 
-        finalResult += String.format("## Project objective\n\n    %s\n\n", objectiveText);
+        finalResult += String.format("## Project objective\n\n%s\n\n", objectiveText);
 
         for (String i : objectives){
 
@@ -141,7 +141,7 @@ public final class MarkdownTransmitter{
 
         String finalResult = "";
 
-        finalResult += "## Installation and Execution\n\n### Windows\n```cmd\n";
+        finalResult += "### Linux/Mac\n```bash\n";
 
         for (int i = 0;i < installLinuxMacCommands.size();i ++){
 
@@ -196,10 +196,9 @@ public final class MarkdownTransmitter{
 
         finalResult += "## Author\n\n";
 
-        for (String i : connections){
-
-            finalResult += String.format("    %s\n\n", i);
-        }
+        finalResult += String.format("- Github : [%s](https://github.com/%s)\n\n", connections[0], connections[0]);
+        finalResult += String.format("- Telegram : [%s](https://t.me/%s)\n\n", connections[1], connections[1]);
+        finalResult += String.format("- Gmail : %s\n\n", connections[2]);
 
         return finalResult;
     }

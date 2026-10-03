@@ -577,7 +577,7 @@ public class ReadmeController{
 				continue;
 			} else if (validator.equals("Invalid data: Telegram username")){
 
-				System.out.println("The Telegram username must start with @.");
+				System.out.println("The Telegram username should not start with the @ symbol.");
 				continue;
 			} else{
 
