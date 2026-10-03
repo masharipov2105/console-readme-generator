@@ -88,6 +88,7 @@ This project was born out of a personal need: I wanted to improve my Java skills
 
 ![Home](https://raw.githubusercontent.com/masharipov2105/console-readme-generator/refs/heads/main/screenshots/img2.png)
 
+![Home](https://raw.githubusercontent.com/masharipov2105/console-readme-generator/refs/heads/main/screenshots/img3.png)
 ---
 
 
