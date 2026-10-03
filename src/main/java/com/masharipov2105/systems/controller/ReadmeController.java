@@ -18,10 +18,6 @@ public class ReadmeController{
 							"==             Console Readme Generator          ==\n" +
 							"===================================================\n";
 
-	private String help = "1. help - show program commands\n" +
-						  "2. done - closed progress\n" +
-						  "3. quit - closed progress and exit program\n";
-
 
 	public ReadmeController(ReadmeService service){
 
@@ -32,7 +28,6 @@ public class ReadmeController{
 	public void start(){
 
 		System.out.println(banner);
-		System.out.println(help);
 
 		String projectName = getProjectName();
 		String projectDescription = getProjectDescription(projectName);
