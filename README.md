@@ -1,7 +1,7 @@
 # Console Readme Generator
 
 
-**Console Readme Generator** - Console Readme Generator - A CLI tool that generates standardized README.md files through an interactive questionnaire.
+**Console Readme Generator** - A CLI tool that generates standardized README.md files through an interactive questionnaire.
 
 ---
 
